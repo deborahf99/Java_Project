@@ -10,12 +10,9 @@ import org.junit.jupiter.api.Test;
 public class SampleTest {
 	@Test
 	void sampleTest() {
-		SampleModel sample = new SampleModel();
-		
-		sample.setId(UUID.randomUUID().toString());
-		sample.setName("Sample name");
+		SampleModel sample = new SampleModel(UUID.randomUUID().toString(), "Sample name");
 		
 		assertNotNull(sample);
-		assertEquals("Sample name", sample.getName());
+		assertEquals("Sample name", sample.name());
 	}
 }
