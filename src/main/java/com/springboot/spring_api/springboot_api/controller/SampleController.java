@@ -37,7 +37,7 @@ public class SampleController {
 	}
 	
 	//POST, https://localhost:8080/sample
-	@PostMapping
+	@PostMapping(consumes = {"*/*"})
 	public SampleModel create(@RequestBody SampleModel sample) {
 		return repository.create(sample);
 	}
